@@ -225,6 +225,9 @@ class IdentityDagWalker(DagWalker):
     def walk_re_all(self, formula, args, **kwargs):
         return self.mgr.ReAll()
 
+    def walk_re_allchar(self, formula, args, **kwargs):
+        return self.mgr.ReAllchar()
+
     def walk_re_none(self, formula, args, **kwargs):
         return self.mgr.ReNone()
 

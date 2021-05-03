@@ -1001,6 +1001,11 @@ class FormulaManager(object):
         """
         return self.create_node(node_type=op.RE_ALL, args=())
 
+    def ReAllchar(self):
+        """Returns a constant denoting the set of all strings of length 1
+        """
+        return self.create_node(node_type=op.RE_ALLCHAR, args=())
+
     def ReNone(self):
         """Returns a constant denoting the empty set of strings
         """
