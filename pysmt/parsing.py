@@ -197,6 +197,10 @@ class HRLexer(Lexer):
             Rule(r"(str\.in\.re)", FunctionCallAdapter(self.mgr.StrInRe, 100), False), # str_in_re
             Rule(r"(re\.range)", FunctionCallAdapter(self.mgr.ReRange, 100), False), # re_range
             Rule(r"(re\.\+\+)", FunctionCallAdapter(self.mgr.ReConcat, 100), False), # re_concat
+            # TODO: FunctionCalls or Constants?
+            Rule(r"(re\.All)", FunctionCallAdapter(self.mgr.ReAll, 100), False), # re_all
+            Rule(r"(re\.Allchar)", FunctionCallAdapter(self.mgr.ReAllchar, 100), False),  # re_allchar
+            Rule(r"(re\.None)", FunctionCallAdapter(self.mgr.ReNone, 100), False),  # re_none
             # TODO: UnaryOperator or FunctionCall??
             Rule(r"(re\.\*)", FunctionCallAdapter(self.mgr.ReKleeneStar, 100), False), # re_kleene_star
             Rule(r"(re\.\+)", FunctionCallAdapter(self.mgr.ReKleenePlus, 100), False), # re_kleene_plus
